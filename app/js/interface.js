@@ -17,59 +17,6 @@ var choose = document.getElementById("choose");
 inputSection.style.display = "block";
 refresh.style.display = "none";
 
-function validate(contents) {
-	var lines = contents.split("\n");
-	var errors = [], matches, key;
-	for (var i = 0; i < lines.length; i++) {
-		if (lines[i].trim().length === 0) {
-			continue;
-		}
-
-		matches = lines[i].match(/^([a-z0-9\-\_]+)\s+=/i);
-		if (!matches) {
-			errors.push({
-				"line_number": i,
-				"message": "Does not start with a valid key followed by an equals symbol",
-				"icon": "bug_report"
-			});
-			continue;
-		}
-
-		key = matches[1];
-
-		matches = lines[i].match(new RegExp(String.fromCharCode(160), "g"));
-		if (matches) {
-			errors.push({
-				"line_number": i,
-				"message": "Contains a non-breaking space, this can break layout spacing",
-				"icon": "warning",
-				"key": key
-			});
-		}
-
-		matches = lines[i].match(/\\\\/g);
-		if (matches) {
-			errors.push({
-				"line_number": i,
-				"message": "Contains a double escape \\\\ this could break links and other attributes",
-				"icon": "warning",
-				"key": key
-			});
-		}
-
-		matches = lines[i].match(/\\:/g);
-		if (matches) {
-			errors.push({
-				"line_number": i,
-				"message": "Contains an escaped : this could break links and other attributes",
-				"icon": "warning",
-				"key": key
-			});
-		}
-	}
-	return errors;
-}
-
 function formatErrors(errors) {
 	var html = [], keyString;
 	for (var i = 0; i < errors.length; i++) {
@@ -93,7 +40,7 @@ function cleanProperties(contents) {
 
 function processInput() {
 	var contents = inputTextarea.value;
-	var errors = validate(contents);
+	var errors = window.validate(contents);
 	var valid = errors.length === 0;
 
 	errorsList.innerHTML = formatErrors(errors);
