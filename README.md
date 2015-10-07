@@ -30,6 +30,7 @@ This app was quickly thrown together for the simple purpose of validating proper
 - Process multiple files
 - Show warnings as annotations on original
 - Replace input box with ace editor
+- Needs a cool icon
 
 ## License
 
