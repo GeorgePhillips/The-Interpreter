@@ -9,6 +9,8 @@ The app consists of two screens:
 - Input screen - paste in your properties file or choose a file
 - Output screen - this will show you if you have any warnings and present you with a sorted properties file.
 
+![Screenshot](screenshot.png)
+
 ## Building the app
 
 ```bash
