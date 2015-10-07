@@ -23,6 +23,14 @@ npm start
 
 This app was quickly thrown together for the simple purpose of validating properties files. If you find a bug or want to make it better add an issue or pull request.
 
+## TODO
+
+- Refactor JS
+- Create dist script
+- Process multiple files
+- Show warnings as annotations on original
+- Replace input box with ace editor
+
 ## License
 
 MIT
