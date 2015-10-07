@@ -1,0 +1,142 @@
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+body, html, input, select, textarea, button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	color: #222;
+}
+
+header {
+	padding: 10px;
+	background: #2196F3;
+	color: #fff;
+}
+
+header h1 {
+	font-size: 1.3rem;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px;
+	line-height: 1.2;
+}
+
+header button {
+	float: right;
+	-webkit-appearance: none;
+	background: none;
+	color: #eee;
+	width: 50px;
+	height: 50px;
+	border: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+header button i {
+	width: 30px;
+	height: 30px;
+	display: block;
+	padding: 10px;
+}
+
+header button:active,
+header button:hover {
+	color: #fff;
+}
+
+section {
+	padding: 20px;
+	display: none;
+	position: absolute;
+	top: 65px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.wrapper {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 10px;
+}
+
+textarea {
+	display: block;
+	flex: 1 0 300px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #eee;
+	border-radius: 2px;
+	white-space: pre;
+	word-wrap: normal;
+	overflow-x: scroll;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+section button {
+	padding: 12px 15px;
+	margin: 10px 0 0 0;
+	background: #607D8B;
+	color: #ECEFF1;
+	border-radius: 2px;
+	-webkit-appearance: none;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+section button:hover {
+	background: #546E7A;
+}
+
+section button:active {
+	color: #FFF;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+#errors {
+	padding-left: 0;
+	margin: 0 0 1em 0;
+}
+
+#errors li {
+	padding-left: 30px;
+}
+
+#errors small {
+	color: #888;
+	font-style: italic;
+}
+
+.status-text, #errors li {
+	line-height: 25px;
+}
+
+.status-text i, #errors li i {
+	float: left;
+	margin-right: 5px;
+}
+
+.status-text.invalid {
+	color: #F44336;
+}
+
+.status-text.valid {
+	color: #4CAF50;
+}
+
+.status-text {
+	margin-top: 0;
+}

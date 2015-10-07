@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Properties Checker</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<button id="choose"><i class="material-icons">file_upload</i> Choose File</button>
+			<button id="refresh"><i class="material-icons">refresh</i> Choose File</button>
+			<h1>Properties Checker</h1>
+		</header>
+		<main>
+			<section id="input-section">
+				<form id="input-form" class="wrapper">
+					<textarea id="input" placeholder="Enter properties file contents here..."></textarea>
+					<button type="submit">Validate and Clean Contents</button
+				</form>
+			</section>
+			<section id="output-section">
+				<div class="wrapper">
+					<p id="valid-output-status" class="status-text valid"><i class="material-icons">done</i> This is a valid properties file</p>
+					<p id="invalid-output-status" class="status-text invalid"><i class="material-icons">bug_report</i> This is an invalid properties file</p>
+					<ul id="errors"></ul>
+					<textarea id="output" readonly></textarea>
+				</div>
+			</section>
+		</main>
+		<script type="text/javascript" src="./js/interface.js"></script>
+	</body>
+</html>
